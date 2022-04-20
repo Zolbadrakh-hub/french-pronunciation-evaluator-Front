@@ -1,10 +1,12 @@
-const mongoose = require ('mongoose');
+// Connect Mongoose
+const mongoose = require("mongoose");
 
-const connectDB = async() => {
-    const conn = await mongoose.connect("mongodb+srv://frenchpro:91869740Za@frenchpro.8eiuu.mongodb.net/audioDB?retryWrites=true&w=majority", {
-        useUnifiedTopology: true,
-    });
-    console.log(`MongoDB холбодлоо : ${conn.connection.host}`);
-}
+const connectDB = async () => {
+    const conn = await mongoose.connect(process.env.DB_URI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+});
+     console.log(`MONGODB холбогдолоо : ${conn.connection.host}`)
+};
 
 module.exports = connectDB;

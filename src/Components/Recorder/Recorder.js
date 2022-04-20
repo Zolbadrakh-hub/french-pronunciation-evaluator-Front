@@ -43,7 +43,7 @@ const [currentSentence, setCurrentSentence] = React.useState(0);
         <div className='downBTN'>
         <button className='doneBTN' onClick={() => {pauseRecording();
           setCurrentSentence(currentSentence+1);
-          }}>SEND <MdDone size={15}/></button>
+          }}>SEND</button>
           <button className='resetBTN' onClick={resumeRecording}>RESET</button>
         </div>
        
